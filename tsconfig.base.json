@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    /* Shared settings */
+    "target": "es2016",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUncheckedIndexedAccess": true,
+    "removeComments": true,
+    "skipLibCheck": true,
+    /* Don’t set module or outDir here */
+  },
+  "include": [
+    "./index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

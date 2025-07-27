@@ -1,0 +1,37 @@
+{
+  "name": "http-request-id",
+  "version": "1.0.0",
+  "description": "Middleware to generate or propagate a unique request ID for each HTTP request in Node.js applications.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "scripts": {
+    "build:cjs": "tsc --project tsconfig.cjs.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build": "npm run build:cjs && npm run build:esm"
+  },
+  "keywords": [
+    "typescript",
+    "node",
+    "middleware",
+    "http",
+    "request-id"
+  ],
+  "author": "Rayen Boussayed rynbsd04@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RYNBSD/http-request-id.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RYNBSD/http-request-id/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.8.3"
+  }
+}

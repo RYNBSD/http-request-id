@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "dist/cjs",
+    /* Optionally, if you want `.js` files to end up as `.cjs` extension: */
+    "allowUmdGlobalAccess": false /* just a placeholder; TS won't change extension itself */
+  }
+}
