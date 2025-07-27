@@ -22,6 +22,24 @@ or
 yarn add http-request-id
 ```
 
+or
+
+```bash
+pnpm add http-request-id
+```
+
+or
+
+```bash
+deno install http-request-id
+```
+
+or
+
+```bash
+bun add http-request-id
+```
+
 ## Basic Usage (Node.js `http`)
 
 ```ts
