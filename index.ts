@@ -116,7 +116,7 @@ export default function requestId(options?: RequestIdOptions) {
   return function (
     req: IncomingMessage,
     res: ServerResponse,
-    next: (error?: any) => void
+    next: (err?: any) => void
   ) {
     // Generate or extract an ID
     const generatedId = options?.generator?.(req) ?? randomUUID();
