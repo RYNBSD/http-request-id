@@ -1,4 +1,4 @@
-# request-id
+# http-request-id
 
 Middleware to generate or propagate a unique request ID for each HTTP request in Node.js applications.
 
@@ -13,20 +13,20 @@ Middleware to generate or propagate a unique request ID for each HTTP request in
 ## Installation
 
 ```bash
-npm install request-id
+npm install http-request-id
 ```
 
 or
 
 ```bash
-yarn add request-id
+yarn add http-request-id
 ```
 
 ## Basic Usage (Node.js `http`)
 
 ```ts
 import http from "node:http";
-import requestId from "request-id";
+import requestId from "http-request-id";
 
 const port = 3000;
 const assignId = requestId(); // default options
@@ -53,7 +53,7 @@ server.listen(port, () => {
 
 ```ts
 import express from "express";
-import requestId from "request-id";
+import requestId from "http-request-id";
 
 const app = express();
 
@@ -88,7 +88,7 @@ Creates a middleware function that assigns a unique request ID.
 | Option              | Type                               | Default          | Description                                                  |
 | ------------------- | ---------------------------------- | ---------------- | ------------------------------------------------------------ |
 | `generator`         | `(req: IncomingMessage) => string` | `randomUUID()`   | Custom function to generate or extract a request ID.         |
-| `headerName`        | `string`                           | `"X-Request-Id"` | HTTP header name to read/write the request ID.               |
+| `headerName`        | `string`                           | `"X-http-Request-Id"` | HTTP header name to read/write the request ID.               |
 | `setResponseHeader` | `boolean`                          | `true`           | Whether to echo the request ID back in the response headers. |
 
 #### Middleware Signature
