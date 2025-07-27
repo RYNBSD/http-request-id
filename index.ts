@@ -110,7 +110,7 @@ export type RequestIdOptions = {
  * ```
  */
 export default function requestId(options?: RequestIdOptions) {
-  const headerName = options?.headerName ?? "x-request-id";
+  const headerName = options?.headerName || "x-request-id";
   const setResponseHeader = options?.setResponseHeader ?? true;
 
   return function (
@@ -119,13 +119,13 @@ export default function requestId(options?: RequestIdOptions) {
     next: (err?: any) => void
   ) {
     // Generate or extract an ID
-    const generatedId = options?.generator?.(req) ?? randomUUID();
+    const generatedId = options?.generator?.(req) || randomUUID();
 
     // Check for incoming header
     const incomingHeader = req.headers?.[headerName];
     const requestIdValue = Array.isArray(incomingHeader)
-      ? incomingHeader?.[0] ?? generatedId
-      : incomingHeader ?? generatedId;
+      ? incomingHeader?.[0] || generatedId
+      : incomingHeader || generatedId;
 
     // Optionally echo back
     if (setResponseHeader) {
